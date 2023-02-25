@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+    /* Removendo o padrão de 16px para 10px */
+
+    --background-color: #F8F8FF;
+    --primary-highlight-color: #6246EA;
+    --secondary-highlight-color: #E45858;
+    --text-color: #121214;
+    --default-background-color: #FFFFFF;
+    --border-color: #EAEAEA;
+    --secondary-text-color: #7C7C8A;
+
+    font-family: "Roboto";
+}
+
+/* Utility do TailWind para screen reader 
+   Sendo utility eu posso colocá-lo em qualquer elemento
+   Sem aparecer na tela, garantindo a acessibilidade
+*/
+.sr-only {
+    position: absolute;
+    width: .1rem;
+    height: .1rem;
+    padding: 0;
+    margin: -.1rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    font-size: 1.6rem;
+    /* 16px de tamanho */
+}
+
+input, select, button {
+    font-family: "Roboto";
+
+    /* Remove todo o conteúdo css aplicado pelo browser */
+    all: unset; 
+}
+
+header {
+    min-height: 53.2rem;
+    background-color: var(--background-color);
+
+    position: relative;
+    /* ::before e ::after agora serão absolutos em relação ao header e não a página */
+    overflow: hidden;
+
+    /* Centralizar e calcular corretamente os espaçamentos */
+    display: grid;
+    place-content: center;
+}
+
+/* Criando elemento que fica antes do conteúdo principal */
+header::before {
+    /* Todo elemento criado pelo css precisa de um content, neste caso está vazio */
+    content: "";
+    background-image: url("./assets/bg-header-top.svg");
+    width: 40.7rem;
+    height: 34.5rem;
+
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+
+header::after {
+    content: "";
+    background-image: url("./assets/bg-header-bottom.svg");
+    width: 41.4rem;
+    height: 33rem;
+
+    position: absolute;
+    bottom: -1.2rem;
+    right: 0;
+}
+
+header .content {
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+header .content .top {
+    text-align: center;
+}
+
+header p {
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: .1rem;
+
+    text-transform: uppercase;
+    color: var(--secondary-highlight-color);
+}
+
+header h1 {
+    font-size: 4.8rem;
+    line-height: 125%;
+    color: var(--text-color);
+
+    max-width: 64.7rem;
+    margin: 1.8rem auto 0;
+}
+
+header h1 span {
+    color: var(--primary-highlight-color);
+}
+
+form {
+    margin-top: 4rem;
+    display: flex;
+    padding: 4rem;
+    gap: 2.4rem;
+
+    background: var(--default-background-color);
+    border: .1rem solid var(--border-color);
+    border-radius: 1rem;
+}
+
+.search-field {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    background: var(--background-color);
+    border-radius: .5rem;
+    padding: 1.2rem .8rem 1.2rem 1.4rem;
+}
+
+.search-field i {
+    color: var(--secondary-highlight-color);
+    font-size: 2.4rem;
+}
+
+select, .select {
+    position: relative;
+}
+
+select {
+    z-index: 1;
+}
+
+.select i.ph-caret-down-light {
+    position: absolute;
+    right: 1.2rem;
+    z-index: 0;
+    color: var(--secondary-text-color);
+}
+
+input, select {
+    color: var(--secondary-text-color);
+    min-width: 29rem;
+}
+
+form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2rem 3.2rem;
+    gap: .8rem;
+
+    background: var(--primary-highlight-color);
+    border-radius: .5rem;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    text-transform: uppercase;
+    color: var(--default-background-color);
+    cursor: pointer;
+    transition: background 200ms;
+}
+
+button:hover {
+    background: #523DBE;
+}
+
+/* TailWind on this project */
+/* phosphor icons */
+/* Link do layout para o readme -> https://www.figma.com/community/file/1207675804423978995 */
+/* 1:22:00 */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre seu bloco preferido</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    
+    <header>
+        <div class="content">
+
+            <div class="top">
+                <p>Find your block</p>
+
+                <h1>Encontre os <span>melhores blocos</span> de carnaval de 2023</h1>
+            </div>
+
+            <form class="search">
+
+                <div class="search-field">
+                    <label for="name" class="sr-only">Pesquise por nome</label>
+                    <!-- Classe sr-only do TailWind para leitor de tela -->
+                    <i class="ph-magnifying-glass"></i>
+
+                    <input 
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Pesquise por nome"
+                    >
+                </div>
+
+                <div class="search-field select">
+                    <label for="city" class="sr-only">Selecione uma cidade</label>
+                    <!-- Classe sr-only do TailWind para leitor de tela -->
+                    <i class="ph-map-pin"></i>
+
+                    <select name="city" id="city">
+                        <option value="0" selected>Selecione sua cidade</option>
+                        <option value="recife">Recife - PE</option>
+                        <option value="sao-paulo">São Paulo - SP</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro - RJ</option>
+                        <option value="salvador">Salvador - BA</option>
+                    </select>
+
+                    <i class="ph-caret-down-light"></i>
+                </div>
+
+                <button>Buscar agora</button>
+
+            </form>
+            
+        </div>
+    </header>
+
+</body>
+</html>
