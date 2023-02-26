@@ -37,6 +37,41 @@
     border-width: 0;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: .4rem 2.4rem;
+    border-radius: .5rem;
+}
+
+.primary {
+    background: var(--primary-highlight-color);
+    color: var(--default-background-color);
+    transition: background 200ms;
+}
+
+.primary:hover {
+    background: #523DBE;
+    color: var(--default-background-color);
+}
+
+.secondary {
+    color: var(--primary-highlight-color);
+}
+
+.secondary:hover {
+    background-color: var(--primary-highlight-color);
+    color: var(--default-background-color);
+}
+
 body {
     font-size: 1.6rem;
     /* 16px de tamanho */
@@ -165,28 +200,122 @@ input, select {
     min-width: 29rem;
 }
 
-form button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+form button.btn {
     padding: 1.2rem 3.2rem;
-    gap: .8rem;
-
-    background: var(--primary-highlight-color);
-    border-radius: .5rem;
-
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-
-    text-transform: uppercase;
-    color: var(--default-background-color);
-    cursor: pointer;
-    transition: background 200ms;
 }
 
-button:hover {
-    background: #523DBE;
+main > .content { 
+    /* main > .content Primeiro nível de main  */
+    max-width: 120rem;
+    margin: 10rem auto;
+}
+
+
+/* Resposividade */
+
+main {
+    padding-inline: 4rem;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        font-size: 50%;
+    }
+
+    header::before {
+        background-size: 30vw;
+        background-repeat: no-repeat;
+    }   
+}
+
+@media (max-width: 870px) {
+    header .content {
+        padding: 4rem;
+    }
+
+    header form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 660px) {
+    section.cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    section.cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        width: 100%;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+section.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.top .view {
+    display: flex;
+    padding: .8rem;
+    border: .1rem solid var(--border-color);
+    border-radius: .6rem;
+    gap: .2rem;
+}
+
+section.cards {
+    margin-top: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3.2rem;
+}
+
+.card {
+    background: var(--default-background-color);
+    border: .1rem solid var(--border-color);
+    border-radius: 1rem;
+    max-width: 38.4rem;
+    overflow: hidden;
+}
+
+.card .content {
+    display: grid;
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.card h3 {
+    color: var(--text-color);
+    font-size: 2rem;
+    line-height: 140%;
+}
+
+.card p {
+    opacity: .75;
+}
+
+.card .location {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    opacity: .75;
+}
+
+.location i {
+    color: var(--secondary-highlight-color);
+    font-size: 2.4rem;
+    opacity: 1;
 }
 
 /* TailWind on this project */
