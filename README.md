@@ -11,7 +11,7 @@
 
 <p>The interface</p>
 
-<img src="./images/interface.png" width="700"/> 
+<img src="./assets/interface.png" width="700"/> 
 
 ## Prototype
 
