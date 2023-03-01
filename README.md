@@ -27,7 +27,7 @@ You can access the Rocketseat prototype by clicking the button below.
 
 ## Services Used
 
-![GitHub](https://img.shields.io/badge/GitHub%20Pages-000000?style=for-the-badge&logo=github&logoColor=white)</a>
+![GitHub](https://img.shields.io/badge/GitHub%20Pages-000000?style=for-the-badge&logo=github&logoColor=white)
 
 ## Deploy
 
